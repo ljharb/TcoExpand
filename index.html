@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
 
   <title>ljharb/TcoExpand @ GitHub</title>
 
   <style type="text/css">
     body {
-      margin-top: 1.0em;
-      background-color: #4be53d;
+      margin-top: 1em;
+      background-color: #88E;
       font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
+      color: #FFF;
     }
     #container {
       margin: 0 auto;
       width: 700px;
     }
-    h1 { font-size: 3.8em; color: #b41ac2; margin-bottom: 3px; }
+    h1 { font-size: 3.8em; color: #333; margin-bottom: 3px; }
     h1 .small { font-size: 0.4em; }
     h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #b41ac2; }
-    h3 { text-align: center; color: #b41ac2; }
-    a { color: #b41ac2; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+    h2 { font-size: 1.5em; color: #333; }
+    h3 { text-align: center; color: #333; }
+    a { color: #333; }
+    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic; }
     .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    pre { background: #000; color: #fff; padding: 15px; }
+    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa; }
     .footer { text-align:center; padding-top:30px; font-style: italic; }
+    @-webkit-keyframes colorPulse {
+      0% {background-color: red;}
+     50% {background-color: white;}
+    100% {background-color: blue;}
+    }
+    #bookmarklet {
+        color: #000;
+        font-weight: bold;
+        font-size: 150%;
+        margin: 10px auto;
+        display: inline-block;
+        padding: 6px;
+        border: 3px solid #F00;
+        -webkit-animation: colorPulse 10s infinite alternate;
+    }
   </style>
 </head>
 
@@ -42,24 +57,24 @@
         <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
     </div>
 
-    <h1><a href="http://github.com/ljharb/TcoExpand">TcoExpand</a>
+    <h1><a href="http://github.com/ljharb/TcoExpand">tcoExpand</a>
       <span class="small">by <a href="http://github.com/ljharb">ljharb</a></span></h1>
 
     <div class="description">
       Expands t.co short links on twitter.com when possible.
     </div>
 
-    <p>Expands t.co short links on twitter.com when possible. This only works because Twitter provides the full URL as a data attribute on most shortened links - it's quick and dirty, it may break at any time, and it depends on jQuery to work.</p><h2>Dependencies</h2>
-<p>jQuery; data-ultimate-url HTML attribute on t.co short links.</p>
+    <p>Expands t.co short links on twitter.com when possible. This only works because Twitter provides the full URL as a data attribute on most shortened links - it's quick and dirty, it may break at any time, and it depends on jQuery to work.</p>
 <h2>Install</h2>
-<p>Drag the bookmarklet to your toolbar.</p>
+		<p>Drag this link into your bookmarks toolbar to install the bookmarklet:<br />
+		<a id="bookmarklet" onclick="window.alert('Please drag this link into your bookmarks toolbar to install.'); return false;" href="javascript:(function(a){if(a){a('a[data-expanded-url][data-ultimate-url]').each(function(){var b=a(this),c=b.data('ultimate-url');b.attr('href',c).html(c).removeAttr('data-expanded-url')})}})(jQuery);">tcoExpand</a>
+</p>
+<h2>Dependencies</h2>
+<p>jQuery; data-ultimate-url HTML attribute on t.co short links.</p>
 <h2>License</h2>
 <p>Do whatever you want, however you want, whenever you want. Credit is not required, because this is not impressive code.</p>
-<h2>Authors</h2>
-<p>Jordan Harband (ljharb@gmail.com)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Jordan Harband (ljharb@gmail.com)<br/>      </p>
-
+<h2>Author</h2>
+<p>Jordan Harband (<a href="twitter.com/ljharb">@ljharb</a>)<br/>      </p>
 
     <h2>Download</h2>
     <p>
