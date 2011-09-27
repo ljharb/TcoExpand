@@ -1,0 +1,3 @@
+This is meant to be a quick and dirty bookmarklet to expand all t.co short links on twitter.com whenever possible.
+
+This only works because Twitter provides the full URL as a data attribute on most shortened links - it's quick and dirty, it may break at any time, and it depends on jQuery to work.

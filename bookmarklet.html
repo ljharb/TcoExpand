@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Install the Bookmarklet</title>
+		<style type="text/css">
+			body {
+				text-align: center;
+				padding: 20% 10%;
+			}
+			div {
+				margin-bottom: 10px;
+			}
+			a {
+				font-size: 150%;
+			}
+		</style>
+	</head>
+	<body>
+		<div>Drag this link into your bookmarks toolbar to install the bookmarklet:</div>
+		<a onclick="window.alert('Please drag this link into your bookmarks toolbar to install.'); return false;" href="javascript:(function(a){if(a){a('a[data-expanded-url][data-ultimate-url]').each(function(){var b=a(this),c=b.data('ultimate-url');b.attr('href',c).html(c).removeAttr('data-expanded-url')})}})(jQuery);">tcoExpand</a>
+	</body>
+</html>
